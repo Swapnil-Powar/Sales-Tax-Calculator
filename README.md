@@ -80,7 +80,7 @@ mvn exec:java -Dexec.mainClass="com.salestax.SalesTaxApplication"
 mvn test
 ```
 
-## Sample Output
+## Output
 
 The application processes three predefined shopping baskets and produces the following output:
 
