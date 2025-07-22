@@ -4,7 +4,7 @@ A Java application that calculates sales tax for shopping baskets according to s
 
 ## Business Rules
 
-1. **Basic Sales Tax**: 10% on all goods, except books, food, and medical products which are exempt
+1. **Basic Sales Tax**: 10% on all goods, except books, food, and medical products, which are exempt
 2. **Import Duty**: Additional 5% on all imported goods with no exemptions
 3. **Tax Rounding**: Sales tax is rounded up to the nearest 0.05
 
@@ -12,24 +12,24 @@ A Java application that calculates sales tax for shopping baskets according to s
 
 ```
 sales-tax-calculator/
-├── pom.xml                                    			# Maven configuration
+├── pom.xml                                    			      # Maven configuration
 ├── src/
 │   ├── main/java/com/salestax/
-│   │   ├── SalesTaxApplication.java          			# Main application class
+│   │   ├── SalesTaxApplication.java          			      # Main application class
 │   │   ├── model/
-│   │   │   ├── Item.java                     			# Item domain model
-│   │   │   ├── ItemCategory.java             			# Item categorization enum
-│   │   │   └── Receipt.java                  			# Receipt model with formatting
+│   │   │   ├── Item.java                     			      # Item domain model
+│   │   │   ├── ItemCategory.java             			      # Item categorization enum
+│   │   │   └── Receipt.java                  			      # Receipt model with formatting
 │   │   └── service/
-│   │       ├── ItemParser.java               			# Parses item strings
-│   │       └── SalesTaxCalculator.java       			# Main business logic
+│   │       ├── ItemParser.java               			      # Parses item strings
+│   │       └── SalesTaxCalculator.java       			      # Main business logic
 │   └── test/java/com/salestax/
-│       ├── SalesTaxApplicationIntegrationTest.java  	# Integration tests
+│       ├── SalesTaxApplicationIntegrationTest.java                   # Integration tests
 │       ├── model/
-│       │   ├── ItemTest.java                 			# Unit tests for Item
-│       │   └── ItemCategoryTest.java         			# Unit tests for ItemCategory
+│       │   ├── ItemTest.java                 			      # Unit tests for Item
+│       │   └── ItemCategoryTest.java         			      # Unit tests for ItemCategory
 │       └── service/
-│           └── ItemParserTest.java           			# Unit tests for ItemParser
+│           └── ItemParserTest.java           			      # Unit tests for ItemParser
 ```
 
 ## Key Design Decisions
