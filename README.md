@@ -16,6 +16,7 @@ sales-tax-calculator/
 ├── src/
 │   ├── main/java/com/salestax/
 │   │   ├── SalesTaxApplication.java          			      # Main application class
+│   │   ├── TestApplication.java                          # Application Test
 │   │   ├── model/
 │   │   │   ├── Item.java                     			      # Item domain model
 │   │   │   ├── ItemCategory.java             			      # Item categorization enum
@@ -23,6 +24,7 @@ sales-tax-calculator/
 │   │   └── service/
 │   │       ├── ItemParser.java               			      # Parses item strings
 │   │       └── SalesTaxCalculator.java       			      # Main business logic
+│   │       └── taxCalculationService.java                # Tax calculation service
 │   └── test/java/com/salestax/
 │       ├── SalesTaxApplicationIntegrationTest.java                   # Integration tests
 │       ├── model/
@@ -62,22 +64,17 @@ sales-tax-calculator/
 #### Using Java directly:
 ```bash
 # Compile
-javac -d target/classes -cp src/main/java src/main/java/com/salestax/model/*.java src/main/java/com/salestax/service/*.java src/main/java/com/salestax/*.java
+cd src/main/java
+javac -d ../../../target/classes com/salestax/model/*.java com/salestax/service/*.java com/salestax/*.java
+cd ../../..
 
 # Run
 java -cp target/classes com.salestax.SalesTaxApplication
 ```
 
-#### Using Maven (if available):
+#### Test Mode (Original Test Cases)
 ```bash
-# Compile
-mvn compile
-
-# Run
-mvn exec:java -Dexec.mainClass="com.salestax.SalesTaxApplication"
-
-# Run tests
-mvn test
+java -cp target/classes com.salestax.TestApplication
 ```
 
 ## Output
